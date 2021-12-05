@@ -1,0 +1,38 @@
+Fluid Hybrid/ spongy design model for HTML email.
+
+> Designing for outlook on windows can be a real challenge!
+
+Learning Resources:
+1.
+https://webdesign.tutsplus.com/articles/creating-a-simple-responsive-html-email--webdesign-12978
+
+2.
+https://webdesign.tutsplus.com/tutorials/creating-a-future-proof-responsive-email-without-media-queries--cms-23919
+
+3.
+https://www.emailonacid.com/blog/article/email-development/a-fluid-hybrid-design-primer/
+
+
+> When baking responsiveness into inline CSS remember how the cascade works!
+  - Anything w/ a class name attached w/ declarations in the style tag will be superceded by any 
+  declarations made at the inline level. [try to reserve the style tag for media query styling ONLY when possible]
+
+  - LEARN + RESEARCH MORE about fluid hybrid/ spongy design model for coding HTML email!!
+
+> Research / Learn more about developing HTML email for outlook and GMAIL apps!!
+
+> TEST TEST TEST!!! Test your email via putsmail to see how things look.
+
+> inline CSS is the best way to "bulletproof" your HTML EMAIL!
+
+> All styles whether dont via attributes or an inline css declaration are to be applied to either
+<td> or <table> elements - (trial and error works here)
+
+  - A mix of old and new techniques should be employed to properly style HTML email.
+    - Some aspects of styling in HTML email require some deprecated attributes to be used as CSS is simply unable to handle the job.
+
+    - use of the attributes alongside inline CSS declarations will do the trick.
+
+> *** THE TRICK TO GETTING TABLES TO SIT SIDE-BY-SIDE (Columns) is to set the css display property to inline-block!
+    - Set a width (think fluid hybrid here - set a fluid width such as width with a percentage value along with a max-width with a fixed pixel value. Some classes may need to be added to achieve desired results!)
+

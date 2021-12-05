@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transactional Email</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        font-size: 0.9rem;
+      }
+
+      :root {
+        --att-blue: #0568ae;
+        --light-text: #ffffff;
+        --footer-background-color: #333333;
+      }
+
+      /* three column responsive section */
+      @media (max-width: 600px) {
+        .three-column-container {
+          width: 50%;
+
+          margin: 0 auto;
+        }
+
+        .footer-left-cell,
+        .footer-right-cell {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* .outer-container {
+        width: 100%;
+        background-color: #ededed;
+        border: 3px solid red;
+      } */
+
+      /* .inner-container {
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        border: 3px solid purple;
+      } */
+    </style>
+
+    <!-- font awsome 5.8.2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+      integrity="sha512-rqQltXRuHxtPWhktpAZxLHUVJ3Eombn3hvk9PHjV/N5DMUYnzKPC1i3ub0mEXgFzsaZNeJcoE0YHq0j/GFsdGg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- outer container -->
+    <table
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      style="width: 100%; background-color: #ededed; border: 3px solid red"
+    >
+      outer-container
+      <tr>
+        <td>
+          <!-- inner container  -->
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              background-color: #ffffff;
+              width: 100%;
+              max-width: 600px;
+              margin: 0 auto;
+            "
+          >
+            inner-container
+            <!-- header row -->
+            <tr>
+              <!-- logo -->
+              <td>
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="background-color: #000000; width: 100%"
+                >
+                  <tr>
+                    <!-- logo -->
+                    <td
+                      style="
+                        background-color: #000000;
+                        padding: 20px;
+                        width: 50%;
+                      "
+                    >
+                      <img
+                        src="https://i.postimg.cc/FzjHdbdB/my-att-logo.png"
+                        alt="my-att-logo"
+                      />
+                    </td>
+                    <!-- email title -->
+                    <td
+                      style="
+                        background-color: #000000;
+                        padding: 20px;
+                        width: 50%;
+                      "
+                    >
+                      <p
+                        style="
+                          color: #ffffff;
+                          text-align: right;
+                          font-size: 1rem;
+                        "
+                      >
+                        AT&T payment arrangement confirmation
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr></tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- salutation row -->
+
+            <tr>
+              <td style="padding: 20px">
+                <p>Hi Customer,</p>
+                <p>You committed to the following payment arrangement(s):</p>
+              </td>
+            </tr>
+
+            <!-- services desciption + info -->
+            <tr>
+              <td>
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="padding: 0 20px"
+                >
+                  <!-- service type -->
+                  <tr>
+                    <td>
+                      <div>
+                        <span style="font-weight: 600">Service Type:</span>
+                        Wireless
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- acct # -->
+                  <tr>
+                    <td>
+                      <div class="services__item">
+                        <span style="font-weight: 600">at&t account: </span>
+                        xxxx
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- payment method -->
+                  <tr>
+                    <td>
+                      <div class="services__item">
+                        <span style="font-weight: 600">Payment Method:</span>
+                        Other
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- payment date -->
+                  <tr>
+                    <td>
+                      <div>
+                        <span style="font-weight: 600">Payment Date:</span>
+                        xx/xx/xx
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- payment amount -->
+                  <tr>
+                    <td>
+                      <div>
+                        <span style="font-weight: 600">Amount:</span> $xx.xx
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- paragraph area -->
+                  <!-- subject to suspension row -->
+                  <tr>
+                    <td style="padding-top: 1rem">
+                      <p>
+                        You may be subject to temporary suspension of service if
+                        your payment arrangement is not kept.
+                      </p>
+                    </td>
+                  </tr>
+                  <!-- if suspended row -->
+                  <tr>
+                    <td style="padding-top: 1rem">
+                      <p>
+                        If your service is suspended, billing will continue for
+                        your monthly charges and you will be charger a fee to
+                        restore each AT&T service.
+                      </p>
+                    </td>
+                  </tr>
+                  <!-- call to action row -->
+                  <tr>
+                    <td style="display: inline-block; margin-top: 1rem">
+                      <p>
+                        Sign in to manage your billing and payment information
+                      </p>
+                      <button
+                        style="
+                          display: block;
+                          width: 40%;
+
+                          margin: 1rem 0;
+                          padding: 0.25rem 0.5rem;
+                          background-color: var(--att-blue);
+                          color: var(--light-text);
+                          font-size: 1.2rem;
+                          border: none;
+                          border-radius: 5px;
+                          cursor: pointer;
+                        "
+                      >
+                        Sign In
+                      </button>
+                    </td>
+                  </tr>
+                  <!-- thank you row -->
+                  <tr>
+                    <td class="services__info">
+                      <p>Thank you for choosing us,</p>
+                      AT&T
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- popular support topics -->
+            <tr>
+              <td>
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="
+                    width: 100%;
+                    /* border: 2px solid orange; */
+                    margin: 1.5rem 0;
+                    padding: 0 20px;
+                  "
+                >
+                  <tr>
+                    <td style="display: block; margin-bottom: 1rem">
+                      <p style="font-weight: 600; margin: 0.25rem 0">
+                        Popular support topics
+                      </p>
+                      <!-- managa data usage -->
+                      <a
+                        href="#"
+                        target="_blank"
+                        style="text-decoration: none; color: var(--att-blue)"
+                      >
+                        Manage wireless data use
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- optimize internet speed -->
+                  <tr>
+                    <td style="display: block; margin-bottom: 1rem">
+                      <a
+                        href="#"
+                        target="_blank"
+                        style="text-decoration: none; color: var(--att-blue)"
+                      >
+                        Optimize your internet speed
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- setup personal hotspot-->
+                  <tr>
+                    <td style="display: block; margin-bottom: 1rem">
+                      <a
+                        href="#"
+                        target="_blank"
+                        style="text-decoration: none; color: var(--att-blue)"
+                      >
+                        setup a personal hotspot
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!--images and links row -->
+            <tr>
+              <td style="padding: 15px">
+                <!-- this table takes data cell 100% width -->
+                <table
+                  width="100%"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  align="center"
+                >
+                  <tr>
+                    <!-- go paperless -->
+                    <td style="border: 2px solid red">
+                      <!-- outer table/ container for three columns section -->
+                      <table
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        align="center"
+                        class="three-column-container"
+                      >
+                        <tr>
+                          <!-- data cell nesting three column section -->
+                          <td>
+                            <!-- go paperless -->
+                            <table
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              style="
+                                width: 100%;
+                                max-width: 180px;
+                                display: inline-block;
+                                vertical-align: top;
+                                padding: 0 2.5px;
+                              "
+                              class="three-columns"
+                            >
+                              <tr>
+                                <td style="text-align: center" valign="top">
+                                  <a href="#" target="_blank">
+                                    <img
+                                      src="https://i.postimg.cc/PfZxRH3Q/paperless.png"
+                                      alt="#"
+                                      width="125px"
+                                      style="width: 100%; max-width: 125px"
+                                    />
+                                    <a
+                                      href="#"
+                                      target="_blank"
+                                      style="
+                                        display: block;
+                                        color: var(--att-blue);
+                                        text-decoration: none;
+                                      "
+                                      >Go Paperless
+                                    </a>
+                                    <p>Reduce clutter with online billing</p>
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!-- middle table -->
+                            <table
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              style="
+                                width: 100%;
+                                max-width: 180px;
+                                display: inline-block;
+                                vertical-align: top;
+                                padding: 0 2, 5px;
+                              "
+                            >
+                              <tr>
+                                <td style="text-align: center" valign="top">
+                                  <a href="#" target="_blank">
+                                    <img
+                                      src="https://i.postimg.cc/rs6pwZm4/autopay.png"
+                                      alt="#"
+                                      width="125px"
+                                      style="width: 100%; max-width: 125px"
+                                    />
+                                    <a
+                                      href="#"
+                                      target="_blank"
+                                      style="
+                                        display: block;
+                                        color: var(--att-blue);
+                                        text-decoration: none;
+                                      "
+                                      >Set up AutoPay
+                                    </a>
+                                    <p>
+                                      Save time and pay your bill automatically!
+                                    </p>
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                            <!-- right table -->
+                            <table
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              style="
+                                width: 100%;
+                                max-width: 180px;
+                                display: inline-block;
+                                vertical-align: top;
+                                padding: 0 2, 5px;
+                              "
+                            >
+                              <tr>
+                                <td style="text-align: center" valign="top">
+                                  <a href="#" target="_blank">
+                                    <img
+                                      src="https://i.postimg.cc/50Q01Wx1/understand-bill.png"
+                                      alt="#"
+                                      width="125px"
+                                      style="max-width: 125px"
+                                    />
+                                    <a
+                                      href="#"
+                                      target="_blank"
+                                      style="
+                                        display: block;
+                                        color: var(--att-blue);
+                                        text-decoration: none;
+                                      "
+                                      >Understand your bill
+                                    </a>
+                                    <p>
+                                      Get info about your bill and payment
+                                      options
+                                    </p>
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <!-- go paperless -->
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- footer section and associated rows -->
+            <tr>
+              <td>
+                <!-- container table -->
+                footer main container table {purple border}
+                <table
+                  role="presentaition"
+                  width="100%"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="border: 2px solid rebeccapurple"
+                >
+                  <tr>
+                    <td>
+                      <!-- footer:left column (red border) -->
+                      <table
+                        role="presentaition"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        align="left"
+                        style="
+                          width: 100%;
+                          background-color: #333333;
+                          padding: 1rem;
+                        "
+                      >
+                        <tr>
+                          <td
+                            width="70%"
+                            style="border: 2px solid lightblue; padding: 1rem"
+                            align="left"
+                            class="footer-left-cell"
+                          >
+                            <a href="#" style="color: #ffffff"
+                              >sign in my-att account</a
+                            >
+                            <span style="color: #ffffff">&nbsp;|</span>
+                            <a href="#" style="color: #ffffff">att support</a>
+                            <span style="color: #ffffff">&nbsp;|</span>
+                            <a href="#" style="color: #ffffff">contact us</a>
+                            <br />
+                            <p style="color: #ffffff; padding-top: 0.5rem">
+                              TTY and relay services available
+                            </p>
+                          </td>
+                          <!-- footer social -->
+                          <td
+                            width="30%"
+                            class="footer-right-cell"
+                            style="
+                              border: 2px solid red;
+                              text-align: center;
+                              padding: 1rem;
+                            "
+                          >
+                            <a href="#" style="padding: 0 12px">
+                              <img
+                                src="https://i.postimg.cc/FKBR2HXD/facebook.png"
+                                alt="facebook"
+                              />
+                            </a>
+                            <a href="#" style="padding: 0 12px">
+                              <img
+                                src="https://i.postimg.cc/ZqRn7y2W/twitter.png"
+                                alt="twitter"
+                              />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- body copy (Do not reply) -->
+            <tr>
+              <td
+                style="
+                  padding: 2rem 1rem;
+                  background-color: #333333;
+                  color: #ffffff;
+                "
+              >
+                <p>
+                  Please do not reply to this message. All replies are
+                  automatically deleted. For questions regarding this message,
+                  refer to the contact information listed above.
+                </p>
+              </td>
+            </tr>
+            <!-- body copy (Intellectual property) -->
+            <tr>
+              <td
+                style="
+                  padding: 0.5rem 1rem 0 1rem;
+                  background-color: #333333;
+                  color: #ffffff;
+                "
+              >
+                <p>
+                  &copy;2021 AT&T Intellectual Property. All rights reserved.
+                  AT&T, Globe logo, and DIRECTV are registered trademarks of
+                  AT&T intellectual property and/or AT&T affiliated companies.
+                  All other marks are the property of their respective owners..
+                </p>
+              </td>
+            </tr>
+            <!-- privacy policy + legal center links -->
+            <tr>
+              <td
+                style="
+                  background-color: #333333;
+                  color: #ffffff;
+                  padding: 0 1rem;
+                "
+              >
+                <a href="#" style="color: #fff">Privacy Policy</a>
+                <br />
+                <a href="#" style="color: #fff">Legal Policy Center</a>
+              </td>
+            </tr>
+
+            <!-- footer logo -->
+            <tr>
+              <td>
+                <table style="background-color: #333333">
+                  <tr>
+                    <td>
+                      <a href="https://www.att.com" target="_blank">
+                        <img
+                          src="https://i.postimg.cc/yYHdqG24/att-logo.png"
+                          alt="att-logo"
+                          style="display: block; width: 13%; margin: 0 auto"
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- attribution -->
+            <tr>
+              <td style="text-align: center">
+                <p style="background-color: #333333; color: #ffffff">
+                  coded by
+                  <a href="#" target="_blank" style="color: #ffffff"
+                    >colin r. rodney</a
+                  >
+                  <span style="text-transform: uppercase; color: lightblue"
+                    >&nbsp;note: this is a recreation of an at&t tranactional
+                    email</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <!-- END inner container: NEW CONTENT GOES ABOVE THIS LINE -->
+          </table>
+        </td>
+      </tr>
+
+      <!-- END: outer containe: NEW CONTENT GOES ABOVE THIS LINEr -->
+    </table>
+  </body>
+</html>
