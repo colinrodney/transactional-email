@@ -1,0 +1,130 @@
+<mjml>
+<mj-head>
+  <mj-attributes>
+    <mj-class name="main-background-color" background-color="#f0f0f0"/>
+    <mj-class name="dark-background-fontColor" color="#f0f0f0"/>
+  </mj-attributes>
+</mj-head>
+
+  <mj-body>
+    <!-- Company Header -->
+    <mj-section background-color="#f0f0f0">
+      <mj-column>
+        <mj-image src="https://i.postimg.cc/VLy8cNC1/starbucks-logo-png-1667-banner.png" alt="starbucks-logo" /></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <!-- Image Header -->
+    <mj-section background-color="#f0f0f0">
+      <mj-column>
+        <mj-image src="https://i.postimg.cc/dtMYK0yT/pexels-joshsorenson-976876-sbux-1.jpg" alt="starbucks-logo" /></mj-image>
+      </mj-column>
+    </mj-section>
+
+
+    <!-- Transaction Message Text + CTA -->
+    <mj-wrapper mj-class="main-background-color">
+      <!-- Text -->
+      <mj-section mj-class="main-background-color">
+        <mj-column>
+          <mj-text>Verify your email</mj-text>
+          <mj-text>Click the button below to confirm your email address. You 
+          will be set to rec eive new updates and special offers.</mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- CTA -->
+      <mj-section>
+        <mj-column width="100%">
+            <mj-button width="100%" font-size="16px"
+            border-radius="50px" color="#ffffff" href="#">
+              Verify email
+            </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- SOCIALS -->
+      <mj-section>
+        <mj-column>
+            <mj-social font-size="15px" icon-size="30px" mode="horizontal" align="left">
+                <mj-social-element name="facebook" href="https://mjml.io/"></mj-social-element>
+                <mj-social-element name="twitter" href="https://mjml.io/"></mj-social-element>
+                <mj-social-element name="instagram" href="https://mjml.io/"></mj-social-element>
+              <mj-social-element name="facebook" href="https://mjml.io/"></mj-social-element>
+        </mj-column>
+      </mj-section>
+
+      <!-- Divider -->
+      <mj-section>
+        <mj-column>
+          <mj-divider border-width="2px" border-style="solid" border-color="lightgrey" />
+        </mj-column>
+      </mj-section>
+
+      <!-- Questions? -->
+      <mj-section>
+        <mj-column width="50%">
+          <!-- <mj-text font-size="16px" font-weight="bold">
+            <a href="#">Questions? We're here to help.</a>
+          </mj-text> -->
+          <mj-button font-weight="bold" width="100%" font-size="16px" text-align="left"
+            mj-class="main-background-color" color="#000000" href="#">
+              Questions? We're here to help.
+            </mj-button>
+        </mj-column>
+        <mj-column width="50%">
+          <!-- <mj-text font-size="16px" font-weight="bold">
+            <a href="#">Questions? We're here to help.</a>
+          </mj-text> -->
+          <mj-button font-weight="bold" width="100%" font-size="16px" text-align="right"
+            mj-class="main-background-color" color="#000000" href="#">
+            <img alt="right-arrow" width="20px" src="https://i.postimg.cc/7LN5pxrM/right-chevron.png">
+            </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Divider -->
+        <mj-section>
+          <mj-column width="100%">
+            <mj-divider border-width="2px" border-style="solid" border-color="lightgrey" />
+          </mj-column>
+        </mj-section>
+    </mj-wrapper>
+
+    
+
+    <!-- Footer -->
+    <mj-wrapper mj-class="main-background-color">
+      <mj-section mj-class="main-background-color">
+        <mj-column width="100%">
+          <mj-text>
+            <p>Lorem Ipsum</p>
+            <p>123 Anywhere USA</p>
+            <p>Anywhere, La. 00000</p>
+            <p>not affiliated with Starbucks Coffee Co.</p>
+          </mj-text>
+        </mj-column>
+
+        <mj-column width="100%">
+          <mj-text>
+            <p>Lorem Ipsim dolor sit amet.</p>
+          </mj-text>
+        </mj-column>
+
+        <mj-column width="100%">
+          <mj-text>
+            <p>This email was sent to none@none.com. Please do not reply</p>
+          </mj-text>
+        </mj-column>
+
+        <mj-column width="100%">
+          <mj-text>
+            <a href="#">Privacy Statement</a>
+            <span>|</span>
+            <a href="#">Terms</a>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
